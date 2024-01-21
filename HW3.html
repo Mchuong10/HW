@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Useless Website!</title>
+    <link rel="stylesheet" type="text/css" href="HW3.css" />
+  </head>
+
+  <body>
+    <form name="mainFrom">
+      <fieldset id="pick">
+        <legend>New or Existing Customer</legend>
+        <button
+          type="button"
+          id="newuserBtn"
+          onclick="activateSection('newuser')">
+          Click for New User
+        </button>
+        <button
+          type="button"
+          id="existinguserBtn"
+          onclick="activateSection('existinguser')">
+          Click for Existing User
+        </button>
+      </fieldset>
+
+      <fieldset id="newuser" class="disabled">
+        <legend>New User</legend>
+        <label for="username"> User Name</label>
+        <input name="username" id="username" />
+
+        <label for="password">Password</label>
+        <input name="password" id="password" />
+        <br />
+        <label for="city">City:</label>
+        <input name="city" id="city" />
+
+        <label for="state">State (abbr.):</label>
+        <input name="state" id="state" />
+
+        <button type="button" id="submit" onclick="formSubmitEvent()">
+          Submit
+        </button>
+      </fieldset>
+
+      <fieldset id="existinguser" class="disabled">
+        <legend>Existing User</legend>
+        <label for="existing">User Name</label>
+        <input name="existing" id="existing" />
+
+        <label for="expass">Password</label>
+        <input name="expass" id="expass" />
+        <button type="button" id="loginBtn" onclick="verifyCredentials()">
+          Login
+        </button>
+      </fieldset>
+    </form>
+
+    <script type="text/javascript" src="HW3.js"></script>
+  </body>
+</html>
